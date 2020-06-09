@@ -1,0 +1,19 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "Tech blog by VuePress",
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
+  },
+  "author": "Cynthia Fan",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "lodash": "^4.17.15",
+    "markdown-it-meta": "0.0.1",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "vuepress": "^1.5.0"
+  }
+}
