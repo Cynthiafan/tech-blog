@@ -21,7 +21,12 @@ module.exports = {
             },
         }
     },
-    plugins: {
-        'google-tag-manager': { gtm: 'GTM-T9KF3SR' }
-    }
+    plugins: [
+        [
+            '@vuepress/google-analytics',
+            {
+                'ga': 'UA-91843640-4'
+            }
+        ]
+    ]
 };
