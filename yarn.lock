@@ -7423,6 +7423,11 @@ vuepress-plugin-container@^2.0.2:
   dependencies:
     markdown-it-container "^2.0.0"
 
+vuepress-plugin-google-tag-manager@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-google-tag-manager/-/vuepress-plugin-google-tag-manager-0.0.4.tgz#e7f9947f5eba15e96ebea92f251dbc71318d1aef"
+  integrity sha512-mADSK1hn1UF2OHi6xjTAkcPiunT+iMbbkGM3/BpErHQTx9wpVEh2xDxBiqa2Sy0jvjQUn5vXg/nIjm1VRv4FPA==
+
 vuepress-plugin-smooth-scroll@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.3.tgz#6eff2d4c186cca917cc9f7df2b0af7de7c8c6438"

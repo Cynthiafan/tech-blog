@@ -20,5 +20,8 @@ module.exports = {
                 ],
             },
         }
+    },
+    plugins: {
+        'google-tag-manager': { gtm: 'GTM-T9KF3SR' }
     }
 };
