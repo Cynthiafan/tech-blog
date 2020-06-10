@@ -9,6 +9,7 @@ module.exports = {
         sidebar: [
             'articles/data-structure',
             utils.generateSidebar('JavaScript', 'articles/javascript'),
+            utils.generateSidebar('Side projects', 'articles/lets-do-it')
         ],
         locales: {
             '/': {
