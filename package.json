@@ -4,16 +4,23 @@
   "description": "Tech blog by VuePress",
   "scripts": {
     "docs:build": "vuepress build docs",
-    "docs:dev": "vuepress dev docs"
+    "docs:dev": "vuepress dev docs --no-cache"
   },
   "author": "Cynthia Fan",
   "dependencies": {
+    "@vssue/api-github-v3": "^1.4.4",
+    "@vssue/vuepress-plugin-vssue": "^1.4.6",
+    "dotenv": "^8.2.0",
     "glob": "^7.1.6",
     "lodash": "^4.17.15",
     "markdown-it-meta": "0.0.1"
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.5.1",
+    "node-sass": "^4.14.1",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.2",
     "vuepress": "^1.5.0"
   },
   "resolutions": {

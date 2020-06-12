@@ -7,7 +7,7 @@ const _ = require('lodash');
 const md = new markdownIt();
 md.use(meta);
 
-const generateSidebar = (title, src) => {
+const generateSidebar = (title, src, collapsable = false, sidebarDepth = 0) => {
   const files = getMdFilesPath(src, 'README.md');
   const children = _.sortBy(files, ['order', 'path']).map(file => file.path);
   const path = getReadmePath(src);
@@ -16,6 +16,8 @@ const generateSidebar = (title, src) => {
     title,
     children,
     path,
+    collapsable,
+    sidebarDepth,
   };
 };
 
