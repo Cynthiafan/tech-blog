@@ -8,16 +8,16 @@ module.exports = {
     themeConfig: {
         smoothScroll: true,
         sidebar: [
-            utils.generateSidebar('資料結構', 'articles/data-structure'),
-            utils.generateSidebar('JavaScript', 'articles/javascript'),
-            utils.generateSidebar('瀏覽器相關', 'articles/browser'),
-            utils.generateSidebar('專案筆記', 'articles/lets-do-it'),
+            utils.generateSidebar('資料結構', 'posts/data-structure'),
+            utils.generateSidebar('JavaScript', 'posts/javascript'),
+            utils.generateSidebar('瀏覽器相關', 'posts/browser'),
+            utils.generateSidebar('專案筆記', 'posts/lets-do-it'),
         ],
         locales: {
             '/': {
                 nav: [
                     { text: '關於我', link: 'https://www.cynthiafan.com' },
-                    { text: '技術筆記', link: '/articles/' },
+                    { text: '技術筆記', link: '/posts/' },
                     { text: 'Github', link: 'https://github.com/Cynthiafan' },
                 ],
             },
