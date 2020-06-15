@@ -1,4 +1,5 @@
 const utils = require('../.vuepress/utils');
+const format = require('date-fns').format;
 require('dotenv').config();
 
 module.exports = {
@@ -6,6 +7,7 @@ module.exports = {
     description: '',
     port: 8081,
     themeConfig: {
+        lastUpdated: '最後編輯時間',
         smoothScroll: true,
         sidebar: [
             utils.generateSidebar('資料結構', 'posts/data-structure'),
@@ -31,6 +33,12 @@ module.exports = {
             '@vuepress/google-analytics',
             {
                 'ga': 'UA-91843640-4'
+            }
+        ],
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp) => format(timestamp, 'yyyy/M/d HH:mm')
             }
         ],
         [
