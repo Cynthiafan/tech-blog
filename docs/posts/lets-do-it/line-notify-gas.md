@@ -1,8 +1,13 @@
+---
+tags:
+  - line notify
+  - google apps script
+  - gas
+---
+
 # 用 Line notify 來做個晨報吧！
 
-::: tip 簡介
-技術關鍵字：`Line notify`、`Google Apps Script (GAS)`
-:::
+<Tags :tags="$page.frontmatter.tags" />
 
 ## [Line notify](https://notify-bot.line.me/zh_TW/)
 
@@ -105,3 +110,5 @@ async function sendNotification() {
 
 1. 原本想用 firebase cloud function，結合 database 等功能，結果 firebase free trial (Spark plan) 不能打 google 以外的第三方 API
 2. 下載的 csv 在 GAS 出現亂碼，用 command line 查是 `charset=iso-8859-1`，但是 encode 還是錯誤，最後發現在 postman 上的 response 就沒有亂碼，查 response 的 header Content-Type 發現是 `text/csv;charset=ms950`，改成 `ms950` 就成功了
+
+<CustomVssue :title="$page.title" />

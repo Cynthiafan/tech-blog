@@ -1,11 +1,12 @@
 ---
-title: JSON Web Token (JWT)
 tags: 
   - jwt
   - token
 ---
 
 # JSON Web Token (JWT)
+
+<Tags :tags="$page.frontmatter.tags" />
 
 ::: tip 總而言之
 1. JWT 是一個**概念、規範**，不同的語言皆有遵循此規範來實現驗證的 library。
