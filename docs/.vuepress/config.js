@@ -10,7 +10,7 @@ module.exports = {
         lastUpdated: '最後編輯時間',
         smoothScroll: true,
         sidebar: [
-            utils.generateSidebar('資料結構', 'posts/data-structure'),
+            utils.generateSidebar('🚧 資料結構', 'posts/data-structure'),
             utils.generateSidebar('JavaScript', 'posts/javascript'),
             utils.generateSidebar('瀏覽器相關', 'posts/browser'),
             utils.generateSidebar('專案筆記', 'posts/lets-do-it'),
