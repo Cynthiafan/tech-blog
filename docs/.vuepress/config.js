@@ -4,7 +4,10 @@ require('dotenv').config();
 
 module.exports = {
     title: '前端筆記 | Cynthia Fan',
-    description: '',
+    description: 'Here\'s my blog focused on frontend mainly.',
+    head: [
+        ['link', { rel: 'icon', href: "/images/favicon.png" }]
+    ],
     port: 8081,
     themeConfig: {
         lastUpdated: '最後編輯時間',
