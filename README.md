@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/public/images/favicon.png" alt="logo" width="100">
+  <img src="docs/.vuepress/public/images/favicon.png" alt="logo" width="100">
 </div>
 
 <h1 align="center">
