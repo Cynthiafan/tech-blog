@@ -1,9 +1,9 @@
 ---
 tags:
- - js engine
- - event loop
- - memory leak
- - stack overflow
+  - js engine
+  - event loop
+  - memory leak
+  - stack overflow
 ---
 
 # JS 運行原理：JavaScript Engine
@@ -24,14 +24,17 @@ tags:
 JS engine 執行 js 程式碼時會產生兩部分 `Memory heap` & `Call stack`：
 
 ### Memory heap
-宣告變數的時候會一一存放在記憶體裡，雖然 JS 有垃圾回收 (Barbage collection) 機制，但此機制並不是萬無一失[*見參考]，如果有太多記憶體位置沒被妥善釋放、回收，就會造成 `memory leak`，這也是為什麼應避免使用 global variables。
+
+宣告變數的時候會一一存放在記憶體裡，雖然 JS 有垃圾回收 (Garbage collection) 機制，但此機制並不是萬無一失[*見參考]，如果有太多記憶體位置沒被妥善釋放、回收，就會造成 `memory leak`，這也是為什麼應避免使用 global variables。
 
 參考：[記憶體管理 - 回收機制章節](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Memory_Management)
 
-### Call stack 
+### Call stack
+
 執行 function 的時候會把此項「任務」放進 call stack 裡，stack 此資料結構的特性是**後進先出**，倘若一個 function 一直呼叫自己 (resursion) 導致 stack 不斷往上堆疊，或是一個沒有停止條件的無限迴圈，都會導致 `stack overflow`。
 
 例一：執行 function 的分解動作
+
 ```jsx
 function printSquare(x) {
   const s = multiply(x, x);
@@ -63,13 +66,15 @@ foo();
 不停呼叫自己的過程同時也把任務一直往 call stack 裡面塞，一直沒有處理結果 return 導致最後 `stack overflow`。
 
 ## Web APIs
+
 各家瀏覽器提供了其他操作方法，稱作 `Web APIs`，常見的有以下：
-  - console
-  - DOM(Document) - addEventListener etc.
-  - Window - setTimeout, setInterval
-  - AJAX - FetchAPI or XMLHttpRequest
-  - Graph - SVG, canvas, WebGL
-  - Media - `<video>` or `<audio>`
+
+- console
+- DOM(Document) - addEventListener etc.
+- Window - setTimeout, setInterval
+- AJAX - FetchAPI or XMLHttpRequest
+- Graph - SVG, canvas, WebGL
+- Media - `<video>` or `<audio>`
 
 參考：[MDN Web APIs](https://developer.mozilla.org/zh-TW/docs/Web/API)
 
@@ -96,10 +101,11 @@ Queue 的特性不同於 stack，是**先進先出**，所以先進到 queue 的
 ## setTimeout 的背後發生什麼事
 
 ```jsx
-setTimeout(callback, ms)
+setTimeout(callback, ms);
 ```
 
 流程：
+
 1. `setTimeout` 進到 call stack
 2. Web API 建立 timer
 3. call stack 的 `setTimeout` 移出
@@ -112,9 +118,11 @@ setTimeout(callback, ms)
 ### 延伸情境
 
 ```jsx
-console.log('1');
-setTimeout(() => { console.log('2') }, 0);
-console.log('3');
+console.log("1");
+setTimeout(() => {
+  console.log("2");
+}, 0);
+console.log("3");
 
 // What's the output?
 ```
@@ -131,7 +139,6 @@ console.log('3');
 
 1. 一個聚會邀約，A 說 B 去他才去，B 說 A 去他才去
 2. 總共只有一刀一叉，A 跟 B 都要同時拿刀跟叉才能用餐，A 現在只有刀，B 現在只有叉，互相都在等待對方用完釋出
-
 
 ## 參考文章
 
